@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@media screen and (max-width: 767px) {
+    .overflow {
+        width: 160px!important;
+        height: 160px!important;
+    }
+}
+
+.overflow {
+    display: block;
+    width: 217px;
+    height: 217px;
+    overflow: hidden;
+}
+.overflow img {
+    transition: all 0.2s linear;
+}
+.overflow:hover img {
+    transform: scale(1.2);
+}

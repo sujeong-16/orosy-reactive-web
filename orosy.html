@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오로지</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/orosy.css">
+  <link rel="stylesheet" href="css/image_zoomIn.css">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--slick 라이브러리-->
+  <script src="js/jquery.mousewheel.min.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>  <!--퀵메뉴-->
+  <script src="js/jquery.cookie.js"></script>   <!--팝업창-->
+  <script src="js/jquery-ui-1.10.4.custom.min.js"></script>   <!--팝업창-->
+  <script src="js/waypoints.min.js"></script>   <!--wp-->
+  <script src="js/orosy.js"></script>
+  <script src="js/sementic.js"></script>   <!--시멘틱 태그 스크립트-->
+  <script src="js/rwd_wp.js"></script>   <!--wp-->
+  <script>
+		$(function() {
+			// a[href="#~"] href에 #이 들어가는 모든 애들을 클릭하면,
+			$("a[href*=#]").on("click", function(e) {
+				e.preventDefault();
+				$("html, body").animate({
+					scrollTop: $($(this).attr("href")).offset().top
+				}, 500, "linear");
+			});
+
+      // 팝업창
+      if ( $.cookie("pop") != "no" ) $("#popup").show();
+      $("#popup").css("cursor", "move").draggable();
+      $("#popup area:eq(0)").click(function() {
+        $("#popup").fadeOut("fast");
+      });
+
+      $("#popup area:eq(1)").click(function() {
+        $.cookie("pop", "no", {expires: 1});
+        $("#popup").fadeOut("fast");
+      });
+
+		});
+	</script>
+  <style>
+    #popup {
+      position: fixed;
+      top: 100px;
+      left: 100px;
+      z-index: 9999;
+      display: none;
+    }
+    #skip-menu {
+      position: absolute;
+      top: -9;
+      left: -9;
+      z-index: -999999;
+      color: #fff;
+    }
+    
+    /* #product .p_box li .shop_img {
+      position: relative;
+      top: -130px;
+      left: 70%;
+    }
+    #product .p_box li .shop_img .img_btn {
+      width: 30px;
+      height: 40px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    } */
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <!--팝업창-->
+    <div id="popup">
+      <img src="img/pop.jpg" alt="팝업창" usemap="#pop">
+      <map name="pop" id="pop">
+        <!--coords="시작점x, 시작점y, 끝점x, 끝점y"-->
+        <area shape="rect" coords="255, 332, 290, 345" href="#" alt="창닫기">
+        <area shape="rect" coords="95, 332, 215, 345" href="#" alt="하루동안 창닫기">
+      </map>
+    </div>
+
+    <!--skip menu-->
+    <div id="skip-menu">
+      <a href="#wrap">메뉴 바로가기</a>
+      <a href="#container">콘텐츠 바로가기</a>
+    </div>
+
+    <!--퀵메뉴-->
+    <div id="quick-menu">
+      <div class="top q_menu"></div>
+    </div>
+
+    <? include "header.html"; ?>
+
+    <!--모바일 container-->
+    <div id="container">
+      <ul id="mob-banner">
+        <li>
+          <img src="img/orosy_banner_01.png" alt="배너">
+          <div>
+            <p class="ban_title">일상을 함께하는 모든 것들</p>
+            <p class="ban_text">오로지 나만을 위한 삶이 되도록</p>
+            <p>더 편안하고 안정된 일상을 제공할게요</p>
+          </div>
+        </li>
+        <li>
+          <img src="img/orosy_banner_02.png" alt="배너">
+          <div>
+            <p class="ban_p">오로지 찜질 손목 보호대</p>
+            <p class="ban_title">나만을 위한 맞춤 손목보호대</p>
+            <p class="ban_text">오로지 내 손목에 맞춘 듯,</p>
+            <p>오로지만의 손목보호대가 새로 탄생했어요</p>
+          </div>
+          <div class="ban_btn"><a href="product_soon3.html">자세히보기</a></div>
+        </li>
+        <li>
+          <img src="img/orosy_banner_03.png" alt="배너">
+          <div class="ban_div">
+            <p class="ban_p">오로지 릴렉싱 찜질 압박밴드</p>
+            <p class="ban_title">일상이 습관이 될거예요</p>
+            <p class="ban_text">하루종일 쌓인 피로,</p>
+            <p>찜질 기능과 함께 종아리 붓기를 케어해보세요</p>
+          </div>
+          <div class="ban_btn ban_btn2"><a href="product_soon3.html">자세히보기</a></div>
+        </li>
+        <li>
+          <img src="img/orosy_banner_04.png" alt="배너">
+          <div class="ban_div">
+            <p class="ban_p">오로지 릴렉싱 PPC크림</p>
+            <p class="ban_title">자극없이 순하게</p>
+            <p class="ban_text">놓치고 있던 바디케어,</p>
+            <p>이젠 집에서 간편하게 바르며 힐링해보세요</p>
+          </div>
+          <div class="ban_btn ban_btn2"><a href="product_soon3.html">자세히보기</a></div>
+        </li>
+        <li>
+          <img src="img/orosy_banner_05.png" alt="배너">
+          <div>
+            <p class="ban_p">오로지 세라믹 괄사 마사져</p>
+            <p class="ban_title">내 손 안의 작은 에스테틱</p>
+            <p class="ban_text">국내산 고령토로 수작업으로 빚어내</p>
+            <p>불에 2번 구웠어요</p>
+          </div>
+          <div class="ban_btn"><a href="product_soon3.html">자세히보기</a></div>
+        </li>
+      </ul>
+      <!-- tab-banner -->
+      <ul id="tab-banner">
+        <li>
+          <img src="img/orosy_banner_1.png" alt="배너">
+          <div>
+            <p class="ban_title_t">일상을 함께하는 모든 것들</p>
+            <p class="ban_text_t">오로지 나만을 위한 삶이 되도록</p>
+            <p>더 편안하고 안정된 일상을 제공할게요</p>
+          </div>
+        </li>
+        <li>
+          <img src="img/orosy_banner_2.png" alt="배너">
+          <div>
+            <p class="ban_p_t">오로지 찜질 손목 보호대</p>
+            <p class="ban_title_t">나만을 위한 맞춤 손목보호대</p>
+            <p class="ban_text_t">오로지 내 손목에 맞춘 듯,</p>
+            <p>오로지만의 손목보호대가 새로 탄생했어요</p>
+            <div class="ban_btn_t"><a href="product_soon3.html">자세히보기</a></div>
+          </div>
+        </li>
+        <li>
+          <img src="img/orosy_banner_3.png" alt="배너">
+          <div class="ban_div_t">
+            <p class="ban_p_t">오로지 릴렉싱 찜질 압박밴드</p>
+            <p class="ban_title_t">일상이 습관이 될거예요</p>
+            <p class="ban_text_t">하루종일 쌓인 피로,</p>
+            <p>찜질 기능과 함께 종아리 붓기를 케어해보세요</p>
+            <div class="ban_btn_t"><a href="product_soon3.html">자세히보기</a></div>
+          </div>
+        </li>
+        <li>
+          <img src="img/orosy_banner_4.png" alt="배너">
+          <div class="ban_div_t">
+            <p class="ban_p_t">오로지 릴렉싱 PPC크림</p>
+            <p class="ban_title_t">자극없이 순하게</p>
+            <p class="ban_text_t">놓치고 있던 바디케어,</p>
+            <p>이젠 집에서 간편하게 바르며 힐링해보세요</p>
+            <div class="ban_btn_t"><a href="product_soon3.html">자세히보기</a></div>
+          </div>
+        </li>
+        <li>
+          <img src="img/orosy_banner_5.png" alt="배너">
+          <div>
+            <p class="ban_p_t">오로지 세라믹 괄사 마사져</p>
+            <p class="ban_title_t">내 손 안의 작은 에스테틱</p>
+            <p class="ban_text_t">국내산 고령토로 수작업으로 빚어내</p>
+            <p>불에 2번 구웠어요</p>
+            <div class="ban_btn_t"><a href="product_soon3.html">자세히보기</a></div>
+          </div>
+        </li>
+      </ul>
+
+      <ul id="pc-banner">
+        <li>
+          <img src="img/orosy_main_banner_01.png" alt="배너">
+          <div>
+            <p class="ban_title_p">일상을 함께하는 모든 것들</p>
+            <p class="ban_text_p">오로지 나만을 위한 삶이 되도록</p>
+            <p>더 편안하고 안정된 일상을 제공할게요</p>
+          </div>
+        </li>
+        <li>
+          <img src="img/orosy_main_banner_02.png" alt="배너">
+          <div>
+            <p class="ban_p_p">오로지 찜질 손목 보호대</p>
+            <p class="ban_title_p">나만을 위한 맞춤 손목보호대</p>
+            <p class="ban_text_p">오로지 내 손목에 맞춘 듯,</p>
+            <p>오로지만의 손목보호대가 새로 탄생했어요</p>
+            <div class="ban_btn_p"><a href="product_soon3.html">자세히보기</a></div>
+          </div>
+        </li>
+        <li>
+          <img src="img/orosy_main_banner_03.png" alt="배너">
+          <div class="ban_div_p">
+            <p class="ban_p_p">오로지 릴렉싱 찜질 압박밴드</p>
+            <p class="ban_title_p">일상이 습관이 될거예요</p>
+            <p class="ban_text_p">하루종일 쌓인 피로,</p>
+            <p>찜질 기능과 함께 종아리 붓기를 케어해보세요</p>
+            <div class="ban_btn_p"><a href="product_soon3.html">자세히보기</a></div>
+          </div>
+        </li>
+        <li>
+          <img src="img/orosy_main_banner_04.png" alt="배너">
+          <div class="ban_div_p">
+            <p class="ban_p_p">오로지 릴렉싱 PPC크림</p>
+            <p class="ban_title_p">자극없이 순하게</p>
+            <p class="ban_text_p">놓치고 있던 바디케어,</p>
+            <p>이젠 집에서 간편하게 바르며 힐링해보세요</p>
+            <div class="ban_btn_p"><a href="product_soon3.html">자세히보기</a></div>
+          </div>
+        </li>
+        <li>
+          <img src="img/orosy_main_banner_05.png" alt="배너">
+          <div>
+            <p class="ban_p_p">오로지 세라믹 괄사 마사져</p>
+            <p class="ban_title_p">내 손 안의 작은 에스테틱</p>
+            <p class="ban_text_p">국내산 고령토로 수작업으로 빚어내</p>
+            <p>불에 2번 구웠어요</p>
+            <div class="ban_btn_p"><a href="product_soon3.html">자세히보기</a></div>
+          </div>
+        </li>
+      </ul>
+      <!-- banner 끝 -->
+
+      <!-- <div id="intro">
+        <ul class="intro">
+          <li><img src="img/band.gif" alt="intro"></li>
+          <li><img src="img/brand-contents1.jpg" alt="intro"></li>
+          <li><img src="img/brand-contents2.jpg" alt="intro"></li>
+        </ul>
+      </div> -->
+
+      <div id="product">
+        <h2>오로지 제품들</h2>
+        <div class="p_box">
+          <ul>
+            <form action="cart_insert.php" method="post" enctype="multipart/form-data">
+              <li>
+                <p><input type="hidden" name="img" alt="img" value="img/product/p_img5.png"></p>
+                <p><img src="img/product/p_img5.png" alt="image" class="overlay"></p>
+                <span><input type="hidden" name="name" value="오로지 찜질 손목보호대">오로지 찜질 손목보호대</span>
+                <span><input type="hidden" name="comment" value="2단계 손목보호대">2단계 손목보호대</span>
+                <span class="text_m"><input type="hidden" name="price" value="32900">32,900원</span>
+                <span class="shop_img"><div class="img_btn"><input type="image" src="img/icon/cart-24.png" alt="shop"></div></span>
+              </li>
+            </form>
+          </ul>
+          
+          <ul>
+            <form action="cart_insert.php" method="post" enctype="multipart/form-data">
+              <li>
+                <p><input type="hidden" name="img" alt="img" value="img/product/p_img4.png"></p>
+                <p><img src="img/product/p_img4.png" alt="image"></p>
+                <span><input type="hidden" name="name" value="오로지 릴렉싱 PPC크림">오로지 릴렉싱 PPC크림</span>
+                <span><input type="hidden" name="comment" value="간편하게 관리하세요">간편하게 관리하세요</span>
+                <span class="text_m"><input type="hidden" name="price" value="59000">59,000원</span>
+                <span class="shop_img"><input type="image" src="img/icon/cart-24.png" alt="shop"></span>
+              </li>
+            </form>
+          </ul>
+
+          <ul>
+            <form action="cart_insert.php" method="post" enctype="multipart/form-data">
+              <li>
+                <p><input type="hidden" name="img" alt="img" value="img/product/p_img1.png"></p>
+                <p><img src="img/product/p_img1.png" alt="image"></p>
+                <span><input type="hidden" name="name" value="오로지 세라믹 미니괄사 테라피">오로지 세라믹 미니괄사 테라피</span>
+                <span><input type="hidden" name="comment" value="부드러운 곡선으로 윤곽케어">부드러운 곡선으로 윤곽케어</span>
+                <span class="text_m"><input type="hidden" name="price" value="34900">34,900원</span>
+                <span class="shop_img2"><input type="image" src="img/icon/cart-24.png" alt="shop"></span>
+              </li>
+            </form>
+          </ul>
+        
+          <ul>
+            <form action="cart_insert.php" method="post" enctype="multipart/form-data">
+              <li>
+                <p><input type="hidden" name="img" alt="img" value="img/product/p_img2.png"></p>
+                <p><img src="img/product/p_img2.png" alt="image"></p>
+                <span><input type="hidden" name="name" value="오로지 세라믹 미니괄사 라이트">오로지 세라믹 미니괄사 라이트</span>
+                <span><input type="hidden" name="comment" value="섬세한 포인트로 강력한 라인케어">섬세한 포인트로 강력한 라인케어</span>
+                <span class="text_m"><input type="hidden" name="price" value="34900">34,900원</span>
+                <span class="shop_img2"><input type="image" src="img/icon/cart-24.png" alt="shop"></span>
+              </li>
+            </form>
+          </ul>
+        
+          <ul>
+            <form action="cart_insert.php" method="post" enctype="multipart/form-data">
+              <li>
+                <p><input type="hidden" name="img" alt="img" value="img/product/p_img3.png"></p>
+                <p><img src="img/product/p_img3.png" alt="image"></p>
+                <span><input type="hidden" name="name" value="오로지 세라믹 괄사 마사져">오로지 세라믹 괄사 마사져</span>
+                <span><input type="hidden" name="comment" value="100% 국내산 흙으로 빚어낸 괄사">100% 국내산 흙으로 빚어낸 괄사</span>
+                <span class="text_m"><input type="hidden" name="price" value="99000">99,000원</span>
+                <span class="shop_img2"><input type="image" src="img/icon/cart-24.png" alt="shop"></span>
+              </li>
+            </form>
+          </ul>
+        
+          <ul>
+            <form action="cart_insert.php" method="post" enctype="multipart/form-data">
+              <li>
+                <p><input type="hidden" name="img" alt="img" value="img/product/p_img6.png"></p>
+                <p><img src="img/product/p_img6.png" alt="image"></p>
+                <span><input type="hidden" name="name" value="오로지 릴렉싱 찜질 압박밴드">오로지 릴렉싱 찜질 압박밴드</span>
+                <span><input type="hidden" name="comment" value="찜질이 가능한 압박밴드">찜질이 가능한 압박밴드</span>
+                <span class="text_m"><input type="hidden" name="price" value="19800">19,800원</span>
+                <span class="shop_img2"><input type="image" src="img/icon/cart-24.png" alt="shop"></span>
+              </li>
+            </form>
+          </ul>
+
+          <ul>
+            <form action="cart_insert.php" method="post" enctype="multipart/form-data">
+              <li>
+                <p><input type="hidden" name="img" alt="img" value="img/product/p_img7.png"></p>
+                <p><img src="img/product/p_img7.png" alt="image"></p>
+                <span><input type="hidden" name="name" value="말랑겔">말랑겔</span>
+                <span><input type="hidden" name="comment" value="냉/온 찜질이 가능해요">냉/온 찜질이 가능해요</span>
+                <span class="text_m"><input type="hidden" name="price" value="3000">3,000원</span>
+                <span class="shop_img"><input type="image" src="img/icon/cart-24.png" alt="shop"></span>
+              </li>
+            </form>
+          </ul>
+        </div>
+      </div>
+
+      <div id="story">
+        <h3 class="wp1">오로지 스토리</h3>
+        <p class="wp1">오로지 나만을 위한 삶이 되도록 더 편안하고 안정된 일상을 제공할 수 있게 연구하는 라이프스타일 브랜드입니다.</p>
+        <button type="button" class="story_btn wp1" onclick="location.href='story.html';">바로가기</button>
+      </div>
+    </div>
+    
+    <!-- footer -->
+    <? include "footer.html"; ?>
+  </div>
+</body>
+</html>

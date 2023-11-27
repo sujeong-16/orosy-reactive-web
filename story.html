@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오로지</title>
+  <link rel="stylesheet" href="css/base.css">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/sementic.js"></script>
+  <style>
+    .inner {
+      width: 85%;
+      margin: 0 auto;
+      max-width: 760px;
+    }
+    .inner img {
+      width: 100%;
+    }
+
+    /* _____퀵메뉴QuickMenu_____ */
+    #quick-menu {
+      position: absolute;
+      top: 500px;
+      right: 20px;
+      text-align: center;
+      width: 42px;
+      z-index: 999999;
+    }
+    #quick-menu .q_menu {
+      width: 40px;
+      height: 40px;
+      
+      border-radius: 50%;
+      background-color: #a7aa66;
+      color: #fff;
+      cursor: pointer;
+
+      display: inline-block;
+      padding-top: 10px;
+      margin-top: 15px;
+    }
+    .top::after {
+      content: "\e944";
+      font-family: "xeicon";
+      font-size: 16px;
+    }
+  </style>
+  <script>
+    $(function() {
+      $("html, body, #wrap").stop().animate({"scrollTop": 0}, 1000, "swing");
+
+      // 퀵 메뉴quick menu
+      const defaultTop = parseInt( $("#quick-menu").css("top") );
+
+      $(window).on("scroll", function() {
+        const scv = $(window).scrollTop();
+        $("#quick-menu").stop().animate({
+          top: scv + defaultTop + "px"
+        }, 300);
+      });
+
+      $("#quick-menu .top").on("click", function() {
+        $.scrollTo(this.hash || 0, 500);
+      });
+    })
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <!--퀵메뉴-->
+    <div id="quick-menu">
+      <div class="q_menu">talk</div>
+      <div class="top q_menu"></div>
+    </div>
+
+    <?php include "header.html"; ?>
+    <div class="inner">
+      <img src="img/brand_content.jpg" alt="content">
+    </div>
+    <?php include "footer.html"; ?>
+  </div>
+</body>
+</html>

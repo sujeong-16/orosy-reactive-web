@@ -1,0 +1,93 @@
+textarea {
+  font-family: "Pretendard_Regular";
+  padding: 10px;
+  resize: none;
+}
+
+#content {
+  position: relative;
+  top: 100px;
+  left: 0;
+  width: 90%;
+  height: 600px;
+  margin: 0 auto;
+  max-width: 593px;
+}
+#content div {
+  text-align: center;
+}
+#content div #write {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #111;
+  padding-bottom: 15px;
+}
+#content div form {
+  width: 97%;
+  margin: 0 auto;
+}
+#content div form .write_form .write_row1 {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+#content div form .write_form .write_row1 .ww_name {
+  padding: 0 15px;
+  font-size: 16px;
+}
+#content div form .write_form .write_row1 .ww_check {
+  font-size: 14px;
+}
+#content div form .write_form .write_row2 {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+#content div form .write_form .write_row2 input {
+  padding: 0 5px;
+  height: 25px;
+}
+#content div form .write_form .write_row2 .ww_title {
+  margin-right: 15px;
+}
+#content div form .write_form .write_row3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#content div form .write_form .write_row3 .ww_content {
+  margin-right: 15px;
+  padding-bottom: 15px;
+}
+#content div form .write_form .write_row3 textarea {
+  width: 100%;
+}
+#content div form .write_btn {
+  font-size: 14px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#content div form .write_btn [type=submit] {
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 3px;
+}
+#content div form .write_btn [type=submit]:hover {
+  background-color: #a7aa66;
+}
+#content div form .write_btn a {
+  padding: 10px 19px;
+  margin-left: 10px;
+  border: 1px solid #111;
+  border-radius: 3px;
+}
+#content div form .write_btn a:hover {
+  color: #a7aa66;
+  border-color: #a7aa66;
+}/*# sourceMappingURL=form_write.css.map */

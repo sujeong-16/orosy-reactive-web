@@ -1,0 +1,182 @@
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .login_text {display: none;}
+
+  #tab-header {display: none;}
+  #tab-banner {display: none;}
+  #pc-header {display: none;}
+  #pc-banner {display: none;}
+  #pc-fnb {display: none!important;}
+  
+  #sign-mob {display: block;}
+  #mob-header {display: block;}
+  #mob-banner {display: block;}
+  #fnb {display: block!important;}
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .login_text_mob {display: none;}
+
+  #mob-header {display: none;}
+  #mob-banner {display: none;}
+  #mob-gnb {display: none!important;}
+  #pc-header {display: none;}
+  #pc-banner {display: none;}
+  #fnb {display: none!important;}
+  
+  .login_text {display: block;}
+  #tab-header {display: block;}
+  #tab-banner {display: block;}
+  #product .p_box ul{
+    width: 30%!important;
+    margin-bottom: 30px!important;
+    margin: 0 10px;
+  }
+  #story {
+    margin-bottom: 60px!important;
+  }
+  #pc-fnb {display: block!important;}
+}
+
+/* PC */
+@media screen and (min-width: 1024px) {
+  .login_text_mob {display: none;}
+
+  #mob-header {display: none;}
+  #mob-banner {display: none!important;}
+  #mob-gnb {display: none!important;}
+  #fnb {display: none!important;}
+  #tab-header {display: none;}
+  #tab-banner {display: none;}
+  
+  .login_text {display: block;}
+  #pc-header {display: block;}
+  #pc-banner {display: block!important;}
+  #product {
+    max-width: 1200px;
+  }
+  #product .p_box ul {
+    width: 23%!important;
+    margin-bottom: 30px!important;
+    margin: 0 10px;
+  }
+  #story {
+    margin-bottom: 60px!important;
+  }
+  #pc-fnb {display: block!important;}
+}
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  /*요즘에는 업글이 많이 되어서 -webkit 안붙여도 돌아감*/
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  /*forward. 안 정하면 있던 애가 없어짐*/
+}
+
+/*애니메이션이 무한으로 돌아감*/
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration:1s;
+}
+
+/* 숨기는 css 시작 */
+.wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8 {visibility: hidden;}
+.fadeInUp, .fadeInLeft, .fadeInOut, .fadeInDown {visibility: visible;} 
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+    -webkit-animation-duration:1s;
+  animation-duration:1s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInOut {
+  -webkit-animation-name: fadeInOut;
+  animation-name: fadeInOut;
+    -webkit-animation-duration:1s;
+  animation-duration:1s;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+      -webkit-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
+.delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }

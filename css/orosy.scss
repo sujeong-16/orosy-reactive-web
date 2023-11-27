@@ -1,0 +1,497 @@
+$point-color: #a7aa66;
+
+html, body, #wrap {
+  width: 100%;
+  // height: 2300px;
+
+  position: relative;
+  top: 0;
+  left: 0;
+
+  font-family: "Pretendard_Regular";
+}
+.text_m {
+  font-family: "Pretendard_Medium";
+  font-size: 16px;
+}
+
+/* _____퀵메뉴QuickMenu_____ */
+#quick-menu {
+  position: absolute;
+  top: 530px;
+  right: 20px;
+  text-align: center;
+  width: 42px;
+
+  z-index: 999999;
+
+  .q_menu {
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 50%;
+    background-color: $point-color;
+    color: #fff;
+    cursor: pointer;
+
+    display: inline-block;
+    padding-top: 10px;
+    margin-top: 15px;
+  }
+  .top {
+    &::after {
+      content: "\e944";
+      font-family: "xeicon";
+      font-size: 16px;
+    }
+  }
+}
+
+/* _____container_____ */
+#container {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  
+  #mob-banner {
+    .slick-dots {
+      position: absolute;
+      bottom: 20px;
+      left: 49%;
+
+      transform: translateX(-50%);
+      text-align: center;
+
+      &>li {
+        &>button {
+          font-size: 0;
+          width: 30px;
+          height: 5px;
+      
+          border: none;
+          background-color: $point-color;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+        &.slick-active {
+          button {
+            background-color: #fff;
+            z-index: 1;
+            border: 1px solid #888;
+          }
+        }
+      }
+      li {
+        width: 20px;
+        height: 10px;
+        display: inline-block;
+        margin-right: 3px;
+      }
+    }
+    button {
+      font-size: 0;
+      border: none;
+      outline: none;
+      position: absolute;
+    }
+    li {
+      img {
+        width: 100%;
+      }
+      div {
+        position: absolute;
+        bottom: 110px;
+        left: 40px;
+
+        .ban_p {
+          font-size: 14px;
+        }
+        .ban_title {
+          font-size: 20px;
+          font-family: "Pretendard_Medium";
+          padding: 10px 0;
+        }
+        .ban_text {
+          padding: 10px 0;
+        }
+      }
+      .ban_div {
+        position: absolute;
+        top: 85px;
+        left: 40px;
+      }
+      .ban_btn {
+        position: absolute;
+        bottom: 75px;
+        left: 40px;
+
+        border-bottom: 1px solid #111;
+        width: 65px;
+        height: 25px;
+        line-height: 25px;
+
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: 2px solid #111;
+          font-weight: bold;
+        }
+      }
+      .ban_btn2 {
+        position: absolute;
+        top: 215px;
+        left: 40px;
+      }
+    }
+  }
+  #tab-banner {
+    .slick-dots {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+
+      transform: translateX(-50%);
+      text-align: center;
+
+      &>li {
+        &>button {
+          font-size: 0;
+          width: 50px;
+          height: 7px;
+      
+          border: none;
+          background-color: $point-color;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+        &.slick-active {
+          button {
+            background-color: #fff;
+            z-index: 1;
+            border: 1px solid #888;
+          }
+        }
+      }
+      li {
+        width: 35px;
+        height: 10px;
+        display: inline-block;
+      }
+    }
+    button {
+      font-size: 0;
+      border: none;
+      outline: none;
+      position: absolute;
+    }
+    li {
+      img {
+        width: 100%;
+      }
+      div {
+        position: absolute;
+        bottom: 130px;
+        left: 60px;
+
+        .ban_p_t {
+          font-size: 14px;
+        }
+        .ban_title_t {
+          font-size: 20px;
+          font-family: "Pretendard_Medium";
+          padding: 10px 0;
+        }
+        .ban_text_t {
+          padding: 12px 0;
+        }
+      }
+      .ban_div_t {
+        position: absolute;
+        top: 43%;
+        left: 60px;
+      }
+      .ban_btn_t {
+        position: relative;
+        bottom: -12px;
+        left: 0;
+
+        border-bottom: 1px solid #111;
+        width: 65px;
+        height: 25px;
+        line-height: 25px;
+
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: 2px solid #111;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  #pc-banner {
+    .slick-dots {
+      position: absolute;
+      bottom: 30px;
+      left: 49%;
+
+      transform: translateX(-50%);
+      text-align: center;
+
+      &>li {
+        &>button {
+          font-size: 0;
+          width: 52px;
+          height: 10px;
+      
+          border: none;
+          background-color: $point-color;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+        &.slick-active {
+          button {
+            background-color: #fff;
+            z-index: 1;
+            border: 1px solid #888;
+          }
+        }
+      }
+      li {
+        width: 45px;
+        height: 10px;
+        display: inline-block;
+      }
+    }
+    button {
+      font-size: 0;
+      border: none;
+      outline: none;
+      position: absolute;
+    }
+    li {
+      img {
+        width: 100%;
+      }
+      div {
+        position: absolute;
+        bottom: 20%;
+        left: 130px;
+
+        p {
+          font-size: 18px;
+        }
+        .ban_p_p {
+          font-size: 16px;
+        }
+        .ban_title_p {
+          font-size: 24px;
+          font-family: "Pretendard_Medium";
+          padding: 10px 0;
+        }
+        .ban_text_p {
+          padding: 10px 0;
+        }
+      }
+      .ban_div_p {
+        position: absolute;
+        top: 50%;
+        left: 130px;
+      }
+      .ban_btn_p {
+        position: relative;
+        bottom: -20px;
+        left: 0;
+
+        border-bottom: 1px solid #111;
+        width: 70px;
+        height: 25px;
+        line-height: 25px;
+
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: 2px solid #111;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  // banner 끝
+  #intro {
+    width: 100%;
+    padding: 40px;
+
+    .intro {
+
+      .slick-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 49%;
+  
+        transform: translateX(-50%);
+        text-align: center;
+  
+        &>li {
+          &>button {
+            font-size: 0;
+            width: 100px;
+            height: 5px;
+        
+            border: none;
+            background-color: $point-color;
+            cursor: pointer;
+          }
+          &.slick-active {
+            button {
+              background-color: #111;
+              z-index: 1;
+            }
+          }
+        }
+      }
+      button {
+        font-size: 0;
+        border: none;
+        outline: none;
+        position: absolute;
+      }
+      li {
+        width: 45%;
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
+  #product {
+    position: relative;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    
+    h2 {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    .p_box {
+      margin: 0 auto;
+      width: 90%;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+      
+      ul {
+        width: 50%;
+        padding: 0 5px;
+      }
+      li {
+        margin-bottom: 20px;
+        
+        img {
+          width: 100%;
+          background-color: rgba($color: #d9d9d9, $alpha: 0.1);
+          /* transition: all 0.2s linear;
+
+          &:hover {
+            transform: scale(1.1);
+          } */
+        }
+        span {
+          font-size: 14px;
+          display: block;
+          margin: 10px 0;
+          padding-left: 5px;
+
+          [type="image"] {
+            // width: 25px;
+            position: relative;
+            top: 2px;
+            left: 2px;
+          }
+          // [type="submit"] {
+          //   font-family: FontAwesome;
+          // }
+        }
+        // .shop_img {
+        //   position: relative;
+        //   top: -135px;
+        //   left: 75%;
+
+        //   background-color: #fff;
+        //   width: 30px;
+        //   height: 30px;
+        //   border-radius: 20%;
+        // }
+        // .shop_img2 {
+        //   position: relative;
+        //   top: -150px;
+        //   left: 75%;
+
+        //   background-color: #fff;
+        //   width: 30px;
+        //   height: 30px;
+        //   border-radius: 20%;
+        // }
+      }
+    }
+  }
+  #story {
+    // background: url("../img/m_banner-1.jpg") no-repeat center center;
+    background: url("../img/orosy_main_banner_01.png") no-repeat center center;
+    width: 100%;
+    height: 300px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 70px 0;
+    color: #fff;
+    margin-bottom: 40px;
+
+    h3 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 25px;
+      letter-spacing: 1px;
+
+      width: 80%;
+      margin: 20px auto;
+    }
+    .story_btn {
+      width: 100px;
+      height: 35px;
+      line-height: 35px;
+
+      border: none;
+      background-color: $point-color;
+      color: #fff;
+
+      border-radius: 3px;
+      margin: 0 auto;
+
+      text-align: center;
+      cursor: pointer;
+      font-size: 12px;
+
+      &:hover {
+        font-size: 14px;
+      }
+    }
+  }
+}

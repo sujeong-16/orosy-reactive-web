@@ -1,0 +1,85 @@
+[type=submit] {
+  border: none;
+  background: none;
+  background-color: #a7aa66;
+  padding: 3px 5px;
+  color: #fff;
+}
+
+#list-table {
+  width: 80%;
+  max-width: 1000px;
+  position: relative;
+  top: 90px;
+  left: 0;
+  margin: 0 auto;
+  padding-bottom: 150px;
+  font-size: 14px;
+}
+#list-table h3 {
+  font-size: 20px;
+  text-align: center;
+}
+#list-table form {
+  padding: 40px 0 5px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#list-table form div {
+  display: inline-block;
+}
+#list-table form div .list_search1 {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+#list-table table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 14px;
+}
+#list-table table .list_1 {
+  width: 10%;
+}
+#list-table table .list_2 {
+  width: 40%;
+  white-space: no-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#list-table table .list_3 {
+  width: 15%;
+  padding: 5px;
+}
+#list-table table .list_4 {
+  width: 25%;
+  padding: 5px;
+}
+#list-table table .list_5 {
+  width: 10%;
+}
+#list-table #page-btn {
+  text-align: center;
+}
+#list-table #page-btn .page_num {
+  cursor: pointer;
+  padding: 10px 0;
+}
+#list-table #page-btn .board_btn {
+  position: relative;
+  top: 0;
+  float: right;
+}
+#list-table #page-btn .board_btn a {
+  padding: 3px 2px;
+  border-bottom: 1px solid #111;
+}
+#list-table #page-btn .board_btn a:hover {
+  color: #a7aa66;
+  border-color: #a7aa66;
+}
+#list-table #page-btn .board_btn .bb_list {
+  margin-right: 10px;
+}/*# sourceMappingURL=board.css.map */

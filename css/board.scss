@@ -1,0 +1,93 @@
+$point-color: #a7aa66;
+
+[type="submit"] {
+  border: none;
+  background: none;
+  background-color: $point-color;
+  padding: 3px 5px;
+  color: #fff;
+}
+
+#list-table {
+  // border: 1px solid purple;
+  width: 80%;
+  max-width: 1000px;
+
+  position: relative;
+  top: 90px;
+  left: 0;
+
+  margin: 0 auto;
+  padding-bottom: 150px;
+  font-size: 14px;
+
+  h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  form {
+    padding: 40px 0 5px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    div {
+      display: inline-block;
+
+      .list_search1 {
+        font-size: 16px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 14px;
+
+    .list_1 {width: 10%;}
+    .list_2 {
+      width: 40%;
+      white-space: no-wrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .list_3 {
+      width: 15%;
+      padding: 5px;
+    }
+    .list_4 {
+      width: 25%;
+      padding: 5px;
+    }
+    .list_5 {width: 10%;}
+  }
+  #page-btn {
+    text-align: center;
+
+    .page_num {
+      cursor: pointer;
+      padding: 10px 0;
+    }
+    .board_btn {
+      position: relative;
+      top: 0;
+      float: right;
+
+      a {
+        padding: 3px 2px;
+        border-bottom: 1px solid #111;
+
+        &:hover {
+          color: $point-color;
+          border-color: $point-color;
+        }
+      }
+      .bb_list {
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오로지</title>
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/sementic.js"></script>
+    <style>
+        #pages {
+            position: relative;
+            top: 130px;
+            left: 0;
+
+            width: 100%;
+            margin: 0 auto;
+            height: 500px;
+            text-align: center;
+        }
+        #pages .spinner::after {
+            content: "\ec34";
+            font-family: "xeicon";
+            font-size: 140px;
+        }
+        #pages .page_title {
+            font-size: 26px;
+            margin: 15px 0;
+        }
+        #pages .page_con {
+            display: inline;
+            font-size: 20px;
+        }
+        #pages .rollBack {
+            text-decoration: 1px underline #111;
+            font-size: 20px;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <? include "header.html"; ?>
+
+        <div id="pages">
+            <div class="spinner"></div>
+            <p class="page_title">페이지 준비중입니다.</p>
+            <p class="page_con">현재 페이지는 업데이트 준비중입니다.</p>
+            <div class="rollBack"><a href="list.php">뒤로가기</a></div>
+        </div>
+
+        <? include "footer.html"; ?>
+    </div>
+</body>
+</html>

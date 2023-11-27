@@ -1,0 +1,386 @@
+@charset "UTF-8";
+.i_user::after {
+  content: "\e9f5";
+  font-family: "xeicon";
+  font-size: 20px;
+}
+
+.login_user {
+  position: relative;
+  top: 1px;
+  right: -5px;
+}
+.login_user span {
+  font-size: 14px;
+}
+.login_user .i_user_black::after {
+  content: "\e9f3";
+  font-family: "xeicon";
+  font-size: 20px;
+}
+
+/* _____모바일_____ */
+#mob-header {
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #111;
+  position: fixed;
+  padding-left: 30px;
+  padding-right: 25px;
+  z-index: 10;
+}
+#mob-header .m_header {
+  display: flex;
+}
+#mob-header .m_header span.m_icon {
+  cursor: pointer;
+}
+#mob-header .m_header span.m_icon::before {
+  content: "\e91c";
+  font-family: "xeicon";
+  font-size: 20px;
+}
+#mob-header .m_header .m_logo {
+  margin: 0 auto;
+}
+#mob-header .m_header .m_logo h1 {
+  width: 55px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+#mob-header .m_header .m_logo h1 img {
+  width: 100%;
+}
+#mob-header .m_header ul {
+  float: right;
+  display: flex;
+}
+#mob-header .m_header ul li {
+  display: inline-block;
+}
+#mob-header .m_header ul li:last-child {
+  padding-left: 10px;
+}
+#mob-header .m_header ul li .i_cart::after {
+  content: "\e9fb";
+  font-family: "xeicon";
+  font-size: 20px;
+}
+
+#mob-gnb {
+  display: none;
+  z-index: 9999999;
+  width: 100%;
+  padding-bottom: 15px;
+  position: fixed;
+  top: 55px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+#mob-gnb .m_menus {
+  padding: 10px 28px;
+}
+#mob-gnb .m_menus > li {
+  border-top: 1px solid #111;
+}
+#mob-gnb .m_menus > li:first-child {
+  border-top: none;
+}
+#mob-gnb .m_menus > li:last-child {
+  border-bottom: 1px solid #111;
+}
+#mob-gnb .m_menus li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#mob-gnb .m_menus li a, #mob-gnb .m_menus li span {
+  padding-left: 2px;
+  cursor: pointer;
+}
+#mob-gnb .m_menus li span.p_up::after {
+  content: "\e945";
+  font-family: "xeicon";
+  font-size: 14px;
+}
+#mob-gnb .m_menus li span.p_down::after {
+  content: "\e942";
+  font-family: "xeicon";
+  font-size: 14px;
+}
+#mob-gnb .m_menus .m_items {
+  display: none;
+  padding-left: 40px;
+  border: none;
+  padding-bottom: 5px;
+}
+
+/* _____태블릿_____ */
+#tab-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #111;
+  padding: 0 40px;
+  z-index: 10;
+}
+#tab-header .tab_header {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#tab-header .tab_header #tab-logo {
+  width: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 6;
+}
+#tab-header .tab_header #tab-logo h1 {
+  cursor: pointer;
+}
+#tab-header .tab_header #tab-logo h1 img {
+  width: 100%;
+}
+#tab-header .tab_header #tab-menu {
+  text-align: center;
+}
+#tab-header .tab_header #tab-menu .tab_menus li {
+  display: inline-block;
+  padding-right: 20px;
+}
+#tab-header .tab_header #tab-menu .tab_menus li a {
+  font-size: 14px;
+}
+#tab-header .tab_header #tab-menu .tab_icons {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#tab-header .tab_header #tab-menu .tab_icons li {
+  float: left;
+  margin-left: 20px;
+}
+#tab-header .tab_header #tab-menu .tab_icons li a {
+  font-size: 14px;
+}
+
+/* _____PC_____ */
+#pc-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px !important;
+  padding: 0 60px;
+  z-index: 10;
+}
+#pc-header #pc-logo {
+  width: 65px;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  cursor: pointer;
+  z-index: 11;
+}
+#pc-header #pc-logo h1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#pc-header #pc-logo h1 img {
+  width: 100%;
+}
+#pc-header #pc-menu {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+#pc-header #pc-menu .pc_menus {
+  display: inline-block;
+}
+#pc-header #pc-menu .pc_menus li {
+  padding-right: 20px;
+  float: left;
+}
+#pc-header #pc-menu .pc_menus li a {
+  font-size: 14px;
+}
+#pc-header #pc-menu .pc_icons {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+#pc-header #pc-menu .pc_icons li {
+  float: left;
+  margin-left: 20px;
+}
+#pc-header #pc-menu .pc_icons li a {
+  font-size: 14px;
+}
+
+/* 모바일, 태블릿 */
+#fnb {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+}
+#fnb .f_menu {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+#fnb .f_menu p {
+  cursor: pointer;
+  padding: 16px 30px;
+  font-size: 14px;
+}
+#fnb .f_menu p::after {
+  content: "\e942";
+  font-family: "xeicon";
+  padding-left: 10px;
+}
+#fnb .f_menu .f_m_text {
+  display: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 14px 30px;
+}
+#fnb .f_menu .f_m_text span {
+  font-size: 18px;
+  color: #a7aa66;
+  font-family: "Pretendard_Medium";
+}
+#fnb .f_menu .f_m_text ul {
+  font-size: 12px;
+  padding-top: 5px;
+}
+#fnb .f_menu .f_m_text ul li {
+  padding: 4px 0;
+}
+#fnb #fnb-text {
+  width: 100%;
+  height: 240px;
+  color: #9c9c9c;
+  padding: 25px 30px 0 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+#fnb #fnb-text h3 {
+  width: 60px;
+  padding-bottom: 10px;
+}
+#fnb #fnb-text h3 img {
+  width: 100%;
+}
+#fnb #fnb-text .f_text div {
+  padding-bottom: 5px;
+}
+#fnb #fnb-text .f_text div:nth-child(1) {
+  float: left;
+  padding-right: 40px;
+}
+#fnb #fnb-text .f_mm {
+  padding-top: 10px;
+}
+#fnb #fnb-text .f_sns {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+#fnb #fnb-text .f_sns div {
+  padding-bottom: 5px;
+}
+#fnb #fnb-text address {
+  padding-top: 10px;
+}
+
+/* PC */
+#pc-fnb {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  color: #9c9c9c;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+#pc-fnb #pc-f-text {
+  width: 50%;
+  position: absolute;
+  left: 60px;
+  bottom: 15%;
+}
+#pc-fnb #pc-f-text h3 {
+  width: 80px;
+  padding-bottom: 10px;
+}
+#pc-fnb #pc-f-text h3 img {
+  width: 100%;
+}
+#pc-fnb #pc-f-text .p_f_text div {
+  padding-bottom: 5px;
+}
+#pc-fnb #pc-f-text .p_f_text div:nth-child(1) {
+  float: left;
+  padding-right: 40px;
+}
+#pc-fnb #pc-f-text .f_mm {
+  padding-top: 10px;
+}
+#pc-fnb #pc-f-text .f_sns {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+#pc-fnb #pc-f-text .f_sns div {
+  padding-bottom: 5px;
+}
+#pc-fnb #pc-f-text address {
+  padding-top: 10px;
+}
+#pc-fnb #pc-f-cs {
+  width: 20%;
+  position: absolute;
+  left: 60%;
+  bottom: 30%;
+}
+#pc-fnb #pc-f-cs p, #pc-fnb #pc-f-cs span, #pc-fnb #pc-f-cs ul {
+  padding: 8px 0;
+}
+#pc-fnb #pc-f-cs p, #pc-fnb #pc-f-cs span {
+  color: #111;
+}
+#pc-fnb #pc-f-cs span {
+  font-size: 20px;
+  font-family: "Pretendard_Medium";
+}
+#pc-fnb #pc-f-cs li:nth-child(2) {
+  padding: 6px 0;
+}
+#pc-fnb #pc-f-pi {
+  width: 15%;
+  color: #111;
+  position: absolute;
+  right: 20px;
+  bottom: 65%;
+}
+#pc-fnb #pc-f-pi p {
+  padding-bottom: 5px;
+}/*# sourceMappingURL=sementic.css.map */

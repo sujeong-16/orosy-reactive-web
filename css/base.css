@@ -1,0 +1,34 @@
+@charset "utf-8";
+@import url("reset.css");
+@import url("animate.css");
+@import url("sementic.css");
+
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");   /* xeicon 연결 */
+@import url("http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");   /* slick 플러그인 연결 */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Pretendard_Regular", sans-serif;
+}
+a {text-decoration: none; color: inherit;}
+
+@font-face {
+  /* font-family = 알아볼 수 있게끔 이름 원하는 걸로 지으면 됨 */
+  font-family: 'Pretendard_Regular';
+  font-style: 'normal';
+  font-weight: 400;
+  /* 브라우저&디바이스 환경에 따른 font 파일 위치 정의 */
+  src: url(../font/PretendardVariable.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Pretendard_Medium';
+  font-style: 'normal';
+  font-weight: 600;
+  src: url(../font/PretendardVariable.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Pretendard_Bold';
+  font-style: 'normal';
+  font-weight: 700;
+  src: url(../font/PretendardVariable.woff2) format('woff2');
+}

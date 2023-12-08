@@ -118,6 +118,9 @@ html, body, #wrap {
   border-bottom: 2px solid #111;
   font-weight: bold;
 }
+#container #mob-banner li .ban_btn a {
+  color: #111;
+}
 #container #mob-banner li .ban_btn2 {
   position: absolute;
   top: 215px;

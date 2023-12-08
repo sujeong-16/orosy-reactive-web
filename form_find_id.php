@@ -43,7 +43,7 @@ session_start();
           </div>
           <input type="tel" id="find_phone" name="phone" maxlength="11" required>
         </div>
-        <input type="submit" class="text_in" value="로그인">
+        <input type="submit" class="text_in" value="찾기">
       </form>
     </div>
     <? include "footer.html"; ?>

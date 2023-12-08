@@ -34,7 +34,6 @@ $point-color: #a7aa66;
 
   border-bottom: 1px solid rgba($color: #000, $alpha: 0.3);
   background-color: rgba($color: #fff, $alpha: 0.3);
-  color: #111;
 
   position: fixed;
   padding-left: 30px;
@@ -76,6 +75,9 @@ $point-color: #a7aa66;
         &:last-child {
           padding-left: 10px;
         }
+        a {
+          color: #111;
+        }
         .i_cart {
           &::after {
             content: "\e9fb";
@@ -102,24 +104,28 @@ $point-color: #a7aa66;
   font-size: 0.9rem;
 
   .m_menus {
-    padding: 10px 28px;
+    padding: 10px 28px 0 28px;
 
-    & > li {
-      border-top: 1px solid #111;
-      &:first-child {
-        border-top: none;
-      }
-      &:last-child {
-        border-bottom: 1px solid #111;
-      }
-    }
+    // & > li {
+    //   border-top: 1px solid #111;
+    //   &:first-child {
+    //     border-top: none;
+    //   }
+    //   &:last-child {
+    //     border-bottom: 1px solid #111;
+    //   }
+    // }
     li {
       padding-top: 15px;
       padding-bottom: 15px;
 
+      .m_color {
+        color: rgba($color: #111, $alpha: 0.9);
+      }
       a, span {
         padding-left: 2px;
         cursor: pointer;
+        color: #111;
       }
       span.p_up {
         &::after {

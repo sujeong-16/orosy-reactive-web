@@ -1,11 +1,11 @@
 $(function(){
 /** header */
   // 반응형 header에 마우스를 올리면 메뉴 + Sign In & Cart 글자색 변경
-  $("#mob-header ul li a, .m_menus li a, .m_menus li span, #tab-menu ul li a, #pc-menu ul li a").on("mouseover", function(){
-    $("#mob-header ul li a, .m_menus li a, .m_menus li span, #tab-menu ul li a, #pc-menu ul li a").css("color", "#111");
+  $("#mob-header ul li a, .m_menus li a, .m_menus li span").on("mouseover", function(){
+    $("#mob-header ul li a, .m_menus li a, .m_menus li span").css("color", "#111");
     $(this).css("color", "#a7aa66");
   }).on("mouseleave", function() {
-    $("#mob-header ul li a, .m_menus li a, .m_menus li span, #tab-menu ul li a, #pc-menu ul li a").css("color", "#111");
+    $("#mob-header ul li a, .m_menus li a, .m_menus li span").css("color", "#111");
   });
 
   // mobile 햄버거를 클릭했을 때, 메뉴 열고닫기
